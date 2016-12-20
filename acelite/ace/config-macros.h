@@ -26,6 +26,10 @@
 
 #ifdef _WIN32
 #include "ace/config-win32.h"
+#elif defined __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__
+#if __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ == 101000
+#include "ace/config-macosx-yosemite.h"
+#endif
 #else
 #include "ace/config-linux.h"
 #endif

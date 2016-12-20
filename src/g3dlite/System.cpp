@@ -276,6 +276,10 @@ void System::init() {
         }
 
 #   elif defined(G3D_OSX)
+#if __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ == 101000
+  m_operatingSystem = "OSX 10.10.5";
+  m_cpuVendor = "Intel";
+#else
 
         // Operating System:
         SInt32 macVersion;
@@ -321,6 +325,7 @@ void System::init() {
                 break;
         }
     }
+#endif
 #   endif
 
     initTime();

@@ -4,4 +4,6 @@
 
 #include "ace/config-macosx-mavericks.h"
 
+#define ACE_HAS_UINT64_T 1
+
 #endif // ACE_CONFIG_MACOSX_YOSEMITE_H
